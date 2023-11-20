@@ -2,7 +2,7 @@
 
 This is a reimplementation of vanilla Lua's `require` function for the [Playdate](https://play.date/) Lua SDK.
 
-On account of the Playdate not having very much filesystem code at the time, the standard way to split code between multiple files and use third party libraries in the Lua SDK is to use the included `import` statement. While `import` is useful for simple modules that only need to be loaded once, it lacks the semantics needed by most general-purpose Lua libraries. This makes it difficult to use or write libraries which are larger than a single file in scope.
+On account of the Playdate not having very much user-facing filesystem code at the time it was added, the standard way to split code between multiple files and use third party libraries in the Lua SDK is to use the included `import` statement. While `import` is useful for simple modules that only need to be loaded once, it lacks the semantics needed by most general-purpose Lua libraries. This makes it difficult to use or write libraries which are larger than a single file in scope.
 
 This file reimplements Lua's `require` from scratch, with all the semantics necessary for plain *.lua* modules to be loaded correctly and limited support for extension. This should make it compatible with all pure-Lua libraries which don't require advanced manipulation of the *package* table. 
 
