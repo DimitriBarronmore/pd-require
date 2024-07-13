@@ -16,6 +16,7 @@ package = {}
 --package.preload = {}
 package.loaded = {}
 package.path = "./?.lua;./?/init.lua"
+package.config = "/\n;\n?\n!\n-\n"
 
 local pdz_filepath = function(filepath)
     for dirpath in package.path:gmatch("[^;]+") do
