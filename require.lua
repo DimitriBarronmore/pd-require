@@ -5,6 +5,13 @@
     https://mit-license.org/
 --]]
 
+-- Check if it's already been defined, so that this can
+--   be safely used as a built-in dependency in libraries
+--   and for cross-platform code.
+if require then
+    return
+end
+
 package = {}
 --package.preload = {}
 package.loaded = {}
